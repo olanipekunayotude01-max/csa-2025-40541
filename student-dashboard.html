@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Dashboard | Abdulaziz International School</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="brand">Abdulaziz <span>Student Portal</span></div>
+  <nav><span id="who"></span><button class="btn btn-sm" onclick="logout('student')">Log out</button></nav>
+</header>
+<main class="container grid">
+  <section class="card full"><h3>Announcements</h3><div id="announcements"></div></section>
+  <section class="card"><h3>My Results</h3>
+    <div class="table-scroll"><table><thead><tr><th>Subject</th><th>Score</th><th>Grade</th></tr></thead><tbody id="results"></tbody></table></div>
+  </section>
+  <section class="card"><h3>Timetable</h3>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Day</th><th>1st</th><th>2nd</th><th>3rd</th></tr></thead>
+      <tbody>
+        <tr><td>Mon</td><td>Maths</td><td>English</td><td>Physics</td></tr>
+        <tr><td>Tue</td><td>Biology</td><td>Maths</td><td>Civic Ed.</td></tr>
+        <tr><td>Wed</td><td>English</td><td>Chemistry</td><td>Computer</td></tr>
+        <tr><td>Thu</td><td>Physics</td><td>Biology</td><td>Maths</td></tr>
+        <tr><td>Fri</td><td>Chemistry</td><td>Computer</td><td>English</td></tr>
+      </tbody></table></div>
+  </section>
+  <section class="card full calculator-card">
+    <h3>Calculator</h3>
+    <div class="calculator" role="application" aria-label="Calculator">
+      <div id="calcDisplay" class="calc-display" aria-live="polite" aria-label="Calculator display">0</div>
+      <div class="calc-grid">
+        <button type="button" class="calc-key calc-action" data-action="clear" aria-label="Clear">AC</button>
+        <button type="button" class="calc-key calc-action" data-action="backspace" aria-label="Delete last digit">DEL</button>
+        <button type="button" class="calc-key calc-action" data-action="percent" aria-label="Percent">%</button>
+        <button type="button" class="calc-key calc-op" data-action="operator" data-value="/" aria-label="Divide">&divide;</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="7">7</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="8">8</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="9">9</button>
+        <button type="button" class="calc-key calc-op" data-action="operator" data-value="*" aria-label="Multiply">&times;</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="4">4</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="5">5</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="6">6</button>
+        <button type="button" class="calc-key calc-op" data-action="operator" data-value="-" aria-label="Subtract">&minus;</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="1">1</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="2">2</button>
+        <button type="button" class="calc-key" data-action="digit" data-value="3">3</button>
+        <button type="button" class="calc-key calc-op" data-action="operator" data-value="+" aria-label="Add">+</button>
+        <button type="button" class="calc-key calc-wide" data-action="digit" data-value="0">0</button>
+        <button type="button" class="calc-key" data-action="decimal" aria-label="Decimal point">.</button>
+        <button type="button" class="calc-key calc-equals" data-action="equals" aria-label="Equals">=</button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <nav class="footer-nav" aria-label="Footer">
+    <a href="terms.html">Terms and Conditions</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>&copy; Abdulaziz International School</p>
+</footer>
+<script src="js/auth.js"></script>
+<script src="js/student.js"></script>
+</body>
+</html>
